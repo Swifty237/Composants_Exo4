@@ -1,10 +1,10 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Image style={styles.picture} source={require('./assets/rover.jpg')}/>
-      <View style={styles.textBox}>
+      <ScrollView style={styles.textBox}>
         <Text style={styles.text}>Mars Exploration Rover (MER) est une mission double de la NASA lancée
 en 2003 et composée de deux robots mobiles ayant pour objectif
 d'étudier la géologie de la planète Mars et en particulier le rôle
@@ -40,8 +40,9 @@ jours martiens. Spirit, désormais bloqué par le sable, a pu parcourir
 mars 2010. Opportunity, après une tempête de sable qui a recouvert ses
 panneaux solaires, est devenu injoignable et sa mission s'est
 officiellement terminée le 13 février 2019.
-On doit pouvoir faire défiler le texte sans que l'image ne bouge.</Text>
-      </View>
+On doit pouvoir faire défiler le texte sans que l'image ne bouge.
+        </Text>
+      </ScrollView>
     </View>
   );
 }
